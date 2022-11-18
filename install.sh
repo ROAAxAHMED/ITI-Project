@@ -1,3 +1,6 @@
+#reference https://github.com/johnbedeir/Devops-Tools-Documentation/tree/main/DevOps-Pipeline-Python
+#I just added the installation of gcloud too
+
 #Install Java
 echo "--------------------Installing Java--------------------"
 sudo apt-get update -y
