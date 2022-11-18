@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: iti-app
+  template:
+    metadata:
+      labels:
+        app: iti-app
+    spec:
+      containers:
+        - name: graduation
+          image: roaaahmed1999/iti-app-img
+          ports:
+            - containerPort: 8080
+          env:
+            - name: REDIS_HOST
+              value: backend-service

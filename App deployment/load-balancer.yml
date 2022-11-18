@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-load-balancer
+spec:
+  type: LoadBalancer
+  selector:
+    app: iti-app
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080

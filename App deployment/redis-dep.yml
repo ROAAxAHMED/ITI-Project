@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: iti-app2
+  template:
+    metadata:
+      labels:
+        app: iti-app2
+    spec:
+      containers:
+        - name: redis-dep
+          image: redis
+          ports:
+            - containerPort: 6379
